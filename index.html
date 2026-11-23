@@ -94,12 +94,60 @@ b.late{color:#ffb36b}b.early{color:#7ee2a3}.bar{height:8px;background:rgba(255,2
 .done-modal{text-align:center}.done-modal .big-emoji{font-size:52px}.done-modal h2{margin:4px 0}
 #toast{position:fixed;left:50%;top:calc(70px + env(safe-area-inset-top));transform:translateX(-50%) translateY(-20px);background:#fff;color:#111;font-weight:700;font-size:14px;padding:10px 16px;border-radius:24px;opacity:0;transition:.25s;z-index:60;pointer-events:none;max-width:90%;text-align:center}
 #toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.tabbar button{font-size:10px}.tabbar button i{font-size:20px}
+.hero.meals{background:linear-gradient(150deg,#1a1020 0%,#3a1a14 40%,#0f2a4a 100%)}
+.hero.meals .kicker{color:#ffd4a8}
+.mtog{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:0 0 12px}
+.mtog b{display:block;font-size:15px}.mtog span{display:block;font-size:12px;color:var(--mut);font-weight:500}
+.sw{position:relative;width:52px;height:32px;flex:0 0 52px;border-radius:16px;background:#2a3148;border:0;padding:0;cursor:pointer}
+.sw i{position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;background:#fff;transition:left .2s;pointer-events:none}
+.sw.on{background:var(--ok)}.sw.on i{left:23px}
+.totals{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin:0 0 12px}
+.totals .trow{display:flex;justify-content:space-between;align-items:baseline;margin:6px 0 4px;font-size:13px;color:var(--mut)}
+.totals .trow b{color:var(--txt);font-size:16px}
+.tbar{height:10px;background:#0e1120;border-radius:8px;overflow:hidden;position:relative;border:1px solid var(--line)}
+.tbar .zone{position:absolute;top:0;bottom:0;background:rgba(46,160,90,.22)}
+.tbar i{display:block;height:100%;background:linear-gradient(90deg,var(--red),#ffb36b);border-radius:8px;position:relative;z-index:1;transition:width .3s}
+.tbar.ok i{background:linear-gradient(90deg,#2ea05a,#7ee2a3)}
+.tbar.over i{background:linear-gradient(90deg,#e23636,#ff8a8a)}
+.mjump{display:flex;gap:6px;overflow-x:auto;padding:0 0 10px;scrollbar-width:none}.mjump::-webkit-scrollbar{display:none}
+.mjump button{flex:0 0 auto;height:36px;padding:0 12px;border-radius:18px;border:1px solid var(--line);background:var(--card);color:var(--mut);font:700 12px sans-serif;font-family:inherit}
+.mjump button.on{background:var(--red);border-color:var(--red);color:#fff}
+.mcard{display:flex;gap:12px;align-items:flex-start;padding:12px;cursor:pointer}
+.mcard input[type=checkbox]{appearance:none;-webkit-appearance:none;width:24px;height:24px;flex:0 0 24px;margin-top:2px;border:2px solid #4a5270;border-radius:8px;background:#0e1120}
+.mcard input:checked{background-color:var(--ok);border-color:var(--ok);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' d='M3 8.5l3.5 3.5L13 4'/></svg>");background-size:14px;background-position:center;background-repeat:no-repeat}
+.mcard.done{opacity:.72}
+.mcard .mn{flex:1;min-width:0}
+.mcard .mh{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.mcard h3{margin:0;font-size:16px}
+.mcard .mk{font-size:12.5px;color:#9db8ff;font-weight:800;white-space:nowrap}
+.mcard .when{font-size:12px;color:var(--mut);margin:2px 0 6px}
+.mcard p{margin:0;font-size:14px;color:#d5daec}
+.mcard .mnote{margin-top:8px;font-size:12.5px;color:#f5d9a8;background:rgba(245,176,65,.08);border-radius:8px;padding:6px 8px}
+.gitem{display:flex;gap:10px;align-items:flex-start;padding:10px 4px;border-bottom:1px solid var(--line);font-size:14.5px;cursor:pointer}
+.gitem:last-child{border-bottom:0}
+.gitem input[type=checkbox]{appearance:none;-webkit-appearance:none;width:22px;height:22px;flex:0 0 22px;margin-top:1px;border:2px solid #4a5270;border-radius:6px;background:#0e1120}
+.gitem input:checked{background-color:var(--ok);border-color:var(--ok);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' d='M3 8.5l3.5 3.5L13 4'/></svg>");background-size:13px;background-position:center;background-repeat:no-repeat}
+.gitem.done span{text-decoration:line-through;color:var(--mut)}
+.tagpill{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;border-radius:6px;padding:2px 6px;margin-left:6px;vertical-align:middle}
+.tagpill.opt{background:#2a3148;color:#c8cde2}
+.tagpill.sug{background:#3a2a10;color:#f5d9a8}
+.tagpill.you{background:#14301c;color:#7ee2a3}
+.wctl{display:flex;align-items:center;gap:10px;margin-top:8px}
+.wctl button{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card2);color:#fff;font:800 20px sans-serif;font-family:inherit}
+.wctl b{font-size:22px;min-width:36px;text-align:center}
+ul.plain{margin:0;padding:0 0 0 18px;color:#d5daec;font-size:14.5px}
+ul.plain li{margin:0 0 8px}
+.eout{margin-bottom:10px}
+.eout h3{margin:0 0 4px;font-size:16px}
+.absseg{margin:0 0 12px}
 </style></head><body>
 <header><div class="logo">🕷️</div><div><h1>SPIDEY GYM</h1><small>Jacob · Onelife Fitness · 4-day split</small></div></header>
 <main id="main"></main>
 <div id="rest"><div id="resthead">REST</div><div class="rtop"><div id="resttime">1:30</div><div id="restlbl">Rest</div></div><div id="restover"></div><div class="rbar"><div id="restbar"></div></div><div class="rbtns"><button onclick="addRest(-15)">−15s</button><button onclick="addRest(15)">+15s</button><button onclick="stopRest()">Skip / Going ▶</button></div></div>
 <div id="modal"></div><div id="toast"></div>
-<nav class="tabbar"><button data-tab="today" onclick="go('today')"><i>🏋️</i>Today</button><button data-tab="plan" onclick="go('plan')"><i>📅</i>Plan</button><button data-tab="progress" onclick="go('progress')"><i>📈</i>Progress</button><button data-tab="settings" onclick="go('settings')"><i>⚙️</i>Settings</button></nav>
+<nav class="tabbar"><button data-tab="today" onclick="go('today')"><i>🏋️</i>Today</button><button data-tab="meals" onclick="go('meals')"><i>🍽️</i>Meals</button><button data-tab="plan" onclick="go('plan')"><i>📅</i>Plan</button><button data-tab="progress" onclick="go('progress')"><i>📈</i>Progress</button><button data-tab="settings" onclick="go('settings')"><i>⚙️</i>Settings</button></nav>
 <script>
 var EX={
 assist_pullup:{name:"Assisted Pull-Up (or Lat Pulldown)",img:"Pullups",equip:"Assisted pull-up/dip machine (kneel on the pad). More weight on the stack means more help. If it’s taken, use the lat pulldown.",cues:["Grip overhand, a bit wider than shoulders","Pull your chest toward the bar, elbows drive down","Squeeze your shoulder blades at the top","Lower all the way down, slow (2–3 sec)"],mistakes:["Half reps (not straightening the arms at the bottom)","Swinging or kicking","Shrugging shoulders up to the ears"],yt:"assisted pull up machine form"},
@@ -110,9 +158,9 @@ shoulder_press_m:{name:"Shoulder Press Machine",img:"Leverage_Shoulder_Press",eq
 lat_raise:{name:"Dumbbell Lateral Raise",img:"Side_Lateral_Raise",equip:"Light dumbbells from the rack (start 10–15 lb). This is the V-taper builder.",cues:["Slight bend in the elbows","Raise out to the sides to shoulder height","Lead with the elbows, pinkies slightly up","Lower slowly (2 sec)"],mistakes:["Swinging the weight up","Shrugging traps","Going above shoulder height"],yt:"dumbbell lateral raise form"},
 pushdown:{name:"Cable Triceps Pushdown (Rope)",img:"Triceps_Pushdown_-_Rope_Attachment",equip:"Cable station, high pulley, rope attachment.",cues:["Elbows pinned at your sides","Push down until arms are straight","Spread the rope at the bottom, squeeze","Let it back up slowly"],mistakes:["Elbows drifting forward","Leaning over to use bodyweight","Rushing the way up"],yt:"rope triceps pushdown form"},
 db_curl:{name:"Dumbbell Curl",img:"Dumbbell_Bicep_Curl",equip:"Dumbbell rack. Both arms or alternate.",cues:["Stand tall, palms forward","Elbows stay close to your sides","Curl up without swinging, squeeze","Lower all the way down slowly"],mistakes:["Swinging with your back","Elbows moving forward","Half reps"],yt:"dumbbell bicep curl form"},
-captain_chair:{name:"Captain's Chair Knee Raise",img:"Knee_Hip_Raise_On_Parallel_Bars",equip:"Captain's chair / vertical knee raise station (back pad + arm rests).",cues:["Back pressed into the pad, forearms on the rests","Raise knees toward your chest","Curl your hips up a little at the top","Lower slowly, no swinging"],mistakes:["Swinging the legs for momentum","Arching your back off the pad","Dropping the legs fast"],yt:"captains chair knee raise form"},
+captain_chair:{name:"Captain's Chair Knee Raise",img:"Knee_Hip_Raise_On_Parallel_Bars",equip:"Captain's chair / vertical knee raise station (back pad + arm rests).",cues:["Back pressed into the pad, forearms on the rests","Raise knees toward your chest, slow and controlled — no swinging","Curl your hips up a little at the top","Lower slowly, no swinging","No chair? Lie on your back and do bent-knee raises instead, same reps"],mistakes:["Swinging the legs for momentum","Arching your back off the pad","Dropping the legs fast"],yt:"captains chair knee raise form"},
 ab_machine:{name:"Ab Crunch Machine",img:"Ab_Crunch_Machine",equip:"Seated ab crunch machine (pin-select stack). Start light.",cues:["Feet hooked, hands on the handles","Crunch by curling your ribs toward hips","Exhale hard as you crunch","Return slowly, don't let the stack drop"],mistakes:["Pulling with the arms","Going too heavy and jerking","Using hip flexors instead of abs"],yt:"ab crunch machine form"},
-plank:{name:"Plank",img:"Plank",equip:"Floor / stretch mat area.",cues:["Elbows under shoulders","Straight line head to heels","Squeeze glutes and brace abs","Breathe steadily"],mistakes:["Hips sagging","Butt sticking up","Holding your breath"],yt:"plank proper form"},
+plank:{name:"Plank",img:"Plank",equip:"Floor / stretch mat area.",cues:["Elbows under shoulders","Straight line head to heels","Squeeze glutes and brace abs. Don't let your hips sag or pike up","Breathe steadily","If a full plank is too hard, stay on your knees and keep a straight line from head to knees"],mistakes:["Hips sagging","Butt sticking up","Holding your breath"],yt:"plank proper form"},
 leg_press:{name:"Leg Press",img:"Leg_Press",equip:"Leg press: the seated pin-select machine or a plate-loaded 45° sled, whichever your gym has. Start light.",cues:["Feet shoulder-width, mid-platform","Lower until knees are about 90°","Push through your heels","Don't lock knees at the top"],mistakes:["Lower back lifting off the pad","Knees caving in","Locking out knees hard"],yt:"leg press form beginner"},
 db_rdl:{name:"Dumbbell Romanian Deadlift",img:"Stiff-Legged_Dumbbell_Deadlift",equip:"Pair of dumbbells. Light to start; feel the hamstrings.",cues:["Soft knees, flat back","Push your hips back, dumbbells slide down thighs","Stop at mid-shin or when hamstrings stretch","Squeeze glutes to stand up"],mistakes:["Rounding the back","Squatting instead of hinging","Going too low"],yt:"dumbbell romanian deadlift form"},
 lunge:{name:"Walking Lunge (Bodyweight)",img:"Bodyweight_Walking_Lunge",equip:"Open floor or turf. Bodyweight first; hold light dumbbells later.",cues:["Long step forward, torso tall","Back knee drops toward the floor","Front knee tracks over toes","Push through the front heel to step through"],mistakes:["Front knee caving in","Short choppy steps","Leaning forward"],yt:"walking lunge form"},
@@ -126,7 +174,7 @@ pec_deck:{name:"Pec Deck (Machine Fly)",img:"Butterfly",equip:"Pec deck / butter
 db_row:{name:"One-Arm Dumbbell Row",img:"One-Arm_Dumbbell_Row",equip:"Flat bench + dumbbell. Knee and hand on the bench.",cues:["Flat back, hand and knee on the bench","Pull the dumbbell to your hip","Elbow close to your body","Lower to a full stretch"],mistakes:["Twisting your torso","Rounding your back","Pulling to the chest instead of hip"],yt:"one arm dumbbell row form"},
 face_pull:{name:"Face Pull",img:"Face_Pull",equip:"Cable station, rope at upper-chest/face height. For shoulder health and posture.",cues:["Rope at face height, thumbs back","Pull toward your forehead","Elbows high, spread the rope","Squeeze rear delts, return slowly"],mistakes:["Going too heavy","Elbows dropping low","Leaning back"],yt:"cable face pull form"},
 assist_dip:{name:"Assisted Dip",img:"Dip_Machine",equip:"Assisted pull-up/dip machine (dip handles) or seated dip machine. Swap for dips in your plan.",cues:["Chest up, shoulders down","Lower until elbows are about 90°","Press up until arms are straight","Stay slow and controlled"],mistakes:["Going too deep (shoulder strain)","Shrugging","Bouncing at the bottom"],yt:"assisted dip machine form"},
-reverse_crunch:{name:"Reverse Crunch",img:"Reverse_Crunch",equip:"Mat or flat bench.",cues:["Lie on back, knees bent 90°","Curl your hips up off the floor","Knees toward your chest","Lower slowly, no momentum"],mistakes:["Swinging the legs","Using momentum","Neck strain"],yt:"reverse crunch form"},
+reverse_crunch:{name:"Reverse Crunch",img:"Reverse_Crunch",equip:"Mat or flat bench.",cues:["Lie on back, knees bent 90°","Curl your hips up off the floor","Knees toward your chest","Lower slowly, no momentum","A small range is fine if your lower back feels tight"],mistakes:["Swinging the legs","Using momentum","Neck strain"],yt:"reverse crunch form"},
 trap_dl:{name:"Trap-Bar Deadlift (Light)",img:"Trap_Bar_Deadlift",equip:"Trap/hex bar in the free-weight area, if your gym has one. If not, do dumbbell deadlifts.",cues:["Stand in the center, feet hip-width","Hips back, flat back, grab handles","Push the floor away, stand tall","Lower with control, same path"],mistakes:["Rounding your back","Jerking the bar off the floor","Leaning back at the top"],yt:"trap bar deadlift form beginner"},
 split_squat:{name:"Split Squat (Bodyweight)",img:"Split_Squats",equip:"Open floor. Beginner swap for the Bulgarian split squat in your plan.",cues:["Staggered stance, torso tall","Drop the back knee straight down","Front heel stays flat","Push through the front foot"],mistakes:["Front knee caving in","Leaning forward","Stance too narrow (wobbly)"],yt:"split squat form beginner"},
 leg_ext:{name:"Leg Extension",img:"Leg_Extensions",equip:"Leg extension machine. Pad on the lower shin.",cues:["Knees line up with the pivot","Extend until legs are straight","Squeeze quads 1 sec at top","Lower slowly"],mistakes:["Swinging the weight up","Lifting hips off the seat","Going too heavy"],yt:"leg extension machine form"},
@@ -165,10 +213,226 @@ OFF:{name:"Rest Day",short:"OFF",title:"Full rest",body:"Your plan: Sunday is fu
 };
 var WEEK={1:"UA",2:"LA",3:"WALK",4:"UB",5:"LB",6:"COND",0:"OFF"};
 var ROT=["UA","LA","UB","LB"];
+/* ---------- meals (Nov 23, 2026 plan) ---------- */
+/* Kitchen estimates from the source meal plan. Do not invent numbers. */
+var APP_VERSION="v5";
+var MEALS={
+  asOf:"November 23, 2026",
+  goal:"Lean Spider-Man physique, about 175–180 lb at 10–12% body fat, from a starting point of about 195 lb.",
+  style:"Whole-food meals, well seasoned, built around foods that are typically easier with Crohn's. Lactose-free whey isolate for protein shakes. Harmless Harvest coconut water is included because it is already something you buy.",
+  estimateNote:"Numbers are kitchen estimates meant to keep each day near the targets. Brand labels and restaurant scoops will vary a little. If a listed food triggers symptoms, swap it for another item in the same category (another lean protein, another cooked starch) instead of forcing it.",
+  targets:{kcalLo:2200,kcalHi:2300,proteinLo:180,proteinHi:190,water:"3–4 liters (about 13–17 cups)",steps:"8,000–10,000",sleep:"7–8 hours",weekly:"About 1–1.5 lb down, averaged over 2 weeks",avgKcal:2254,avgProtein:186,fat:"roughly 60–75 g",carbs:"often about 200–250 g"},
+  targetNote:"Suggested macro shape while you hit those numbers: keep protein at the target, fat roughly 60–75 g, and let carbohydrates fill the rest (often about 200–250 g). You do not need to count every gram of carb and fat if protein and calories stay on target. This week's seven regular days average 2,254 kcal and 186 g protein.",
+  crohn:{
+    disclaimer:"This is a food plan, not medical advice. Check any meaningful diet change with your GI doctor, especially during a flare.",
+    easier:"Usually easier to tolerate (used throughout this plan): lean proteins (chicken, turkey, white fish, eggs, whey isolate), white rice, oats, potatoes, cooked vegetables, ripe bananas, lactose-free whey isolate or lactose-free yogurt if it sits well.",
+    care:"Use with care, or skip if they bother you: raw salads, beans, spicy sauces, fried food, heavy cream sauces, regular milk or whey concentrate, large amounts of lactose, seeds and skins during a flare.",
+    personal:[
+      "Crohn's is a past and current condition; as of November 2026 you were taking no daily Crohn's medication and managing it holistically.",
+      "Prefer lactose-free whey or isolate.",
+      "You mostly eat whole foods and like food well seasoned.",
+      "You already buy Harmless Harvest Organic Coconut Water (10 oz 12-packs and 16 oz bottles from Publix) and sometimes So Good So You shots. The shots are optional and are not built into the daily totals.",
+      "If yogurt, orange juice, or a seasoned sauce bothers you, cut that item and keep the rest of the meal.",
+      "Do not eat a food in this plan that you already know is a trigger."
+    ]
+  },
+  timingTrain:[
+    "Eat breakfast as usual. If you train within about 90 minutes of waking, keep breakfast lighter (the oat-and-whey bowl, or eggs and a banana) and have the rest after you train.",
+    "Do not start a hard session fully fasted if your stomach is off. A banana or a small whey shake first is enough.",
+    "Have a protein-rich meal or the whey snack within about an hour after lifting or intervals.",
+    "Sip Harmless Harvest coconut water around the workout if you want electrolytes you already tolerate. It is already counted in several snack slots.",
+    "Spread the remaining meals every 3–4 hours. The second snack is optional if dinner already filled you up, but only skip it if you have already hit your protein."
+  ],
+  timingRest:[
+    "Keep the same calorie and protein targets. Recovery still needs the food.",
+    "No special pre- or post-workout snack is required. You can still use a whey shake to help hit protein.",
+    "Eat on a regular schedule, every 3–4 hours, rather than saving everything for night."
+  ],
+  glance:[
+    {dow:1,train:"Upper A (Training)",kcal:2258,protein:186},
+    {dow:2,train:"Lower A (Training)",kcal:2293,protein:187},
+    {dow:3,train:"Walk or rest (Rest / walk)",kcal:2254,protein:188},
+    {dow:4,train:"Upper B (Training)",kcal:2279,protein:187},
+    {dow:5,train:"Lower B + core (Training)",kcal:2263,protein:188},
+    {dow:6,train:"Conditioning (Training)",kcal:2213,protein:181},
+    {dow:0,train:"Full rest (Rest)",kcal:2219,protein:184}
+  ],
+  shiftNote:"If a week starts on a Tuesday, shift the training days with your lifting plan rather than skipping Monday's menu style. You can repeat favorite days as long as the daily total stays near 2,200–2,300 kcal and 180–190 g protein.",
+  flareNote:"Use this in place of any day's menu when symptoms are up. It is lower in fiber, with simpler foods and no raw vegetables or skins. Drink water steadily, but do not force large amounts at once if that aggravates you. Go back to the regular menu when you feel ready. If a flare lasts or worsens, talk to your GI doctor rather than pushing training or new foods.",
+  flare:{kcal:2256,protein:180,kind:"Flare day",train:"Flare-day menu (replaces any day's menu)",meals:[
+    {id:"breakfast",name:"Breakfast",timing:"",food:"1 scoop lactose-free whey isolate, mixed with water; 1 medium banana; 1 cup cooked white rice",kcal:430,protein:30},
+    {id:"lunch",name:"Lunch",timing:"",food:"8 oz baked chicken breast, salted; 1½ cups cooked white rice; 2 tsp butter or olive oil",kcal:761,protein:76},
+    {id:"snack1",name:"Snack 1",timing:"",food:"1 scoop lactose-free whey isolate, mixed with water; 16 oz Harmless Harvest coconut water",kcal:240,protein:25},
+    {id:"dinner",name:"Dinner",timing:"",food:"6 oz cooked cod or tilapia; 1 large baked potato, peeled; 1 cup cooked white rice; 2 tsp butter or olive oil",kcal:745,protein:49},
+    {id:"snack2",name:"Snack 2",timing:"",food:"1/2 cup unsweetened applesauce",kcal:80,protein:0}
+  ]},
+  days:{
+    1:{name:"Monday",kind:"Training day",train:"Upper A",kcal:2258,protein:186,meals:[
+      {id:"breakfast",name:"Breakfast",timing:"Morning",food:"3/4 cup dry oats, cooked in water with cinnamon and a pinch of salt; 1 scoop lactose-free whey isolate, mixed with water; 1 medium banana",kcal:450,protein:34},
+      {id:"lunch",name:"Lunch",timing:"Midday",food:"6 oz cooked chicken breast, well seasoned; 1½ cups cooked white rice; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:718,protein:61},
+      {id:"snack1",name:"Snack 1",timing:"After the workout, or mid-afternoon",food:"1 scoop lactose-free whey isolate, mixed with water; 16 oz Harmless Harvest coconut water",kcal:240,protein:25},
+      {id:"dinner",name:"Dinner",timing:"Evening",food:"5 oz cooked 90% lean ground beef, well seasoned; 1 large baked potato; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:720,protein:46},
+      {id:"snack2",name:"Snack 2",timing:"Later evening, if needed",food:"1 cup lactose-free 0% Greek yogurt, if tolerated",kcal:130,protein:20,note:"If yogurt bothers your stomach, swap for 1 scoop whey in water."}
+    ]},
+    2:{name:"Tuesday",kind:"Training day",train:"Lower A",kcal:2293,protein:187,meals:[
+      {id:"breakfast",name:"Breakfast",timing:"Morning",food:"3 large eggs, scrambled; 3 egg whites, scrambled with the eggs; 2 slices soft white or sourdough bread; 1 tsp butter or olive oil; 6 oz orange juice",kcal:521,protein:35},
+      {id:"lunch",name:"Lunch",timing:"Midday",food:"6 oz cooked turkey breast, well seasoned; 1½ cups cooked white rice; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:702,protein:58},
+      {id:"snack1",name:"Snack 1",timing:"After the workout, or mid-afternoon",food:"1 scoop lactose-free whey isolate, mixed with water; 1 medium banana",kcal:225,protein:26},
+      {id:"dinner",name:"Dinner",timing:"Evening",food:"5 oz cooked salmon; 1 large baked potato; 1 cup cooked vegetables (carrots, zucchini, or green beans); 1 tsp butter or olive oil",kcal:650,protein:43},
+      {id:"snack2",name:"Snack 2",timing:"Later evening",food:"1 scoop lactose-free whey isolate, mixed with water; 10 oz Harmless Harvest coconut water",kcal:195,protein:25}
+    ]},
+    3:{name:"Wednesday",kind:"Rest / walk day",train:"Walk or rest",kcal:2254,protein:188,meals:[
+      {id:"breakfast",name:"Breakfast",timing:"Morning",food:"3/4 cup dry oats, cooked in water with cinnamon and a pinch of salt; 1 scoop lactose-free whey isolate, mixed with water; 1 medium banana; 1 tsp honey (optional, in the oats)",kcal:471,protein:34},
+      {id:"lunch",name:"Lunch",timing:"Midday",food:"6 oz cooked chicken breast, well seasoned; 1½ cups cooked white rice; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:718,protein:61},
+      {id:"snack1",name:"Snack 1",timing:"Afternoon",food:"1 cup lactose-free 0% Greek yogurt, if tolerated; 1 medium banana",kcal:235,protein:21,note:"If yogurt bothers your stomach, swap for 1 scoop whey and keep the banana."},
+      {id:"dinner",name:"Dinner",timing:"Evening",food:"6 oz cooked cod or tilapia; 1 large baked potato; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:590,protein:47},
+      {id:"snack2",name:"Snack 2",timing:"Later evening",food:"1 scoop lactose-free whey isolate, mixed with water; 16 oz Harmless Harvest coconut water",kcal:240,protein:25}
+    ]},
+    4:{name:"Thursday",kind:"Training day",train:"Upper B",kcal:2279,protein:187,meals:[
+      {id:"breakfast",name:"Breakfast",timing:"Morning",food:"3 large eggs, scrambled; 3 egg whites, scrambled with the eggs; 1/2 cup dry oats, cooked in water with cinnamon and a pinch of salt; 1 medium banana",kcal:516,protein:35},
+      {id:"lunch",name:"Lunch",timing:"Midday",food:"6 oz cooked chicken breast, well seasoned; 1½ cups cooked white rice; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:718,protein:61},
+      {id:"snack1",name:"Snack 1",timing:"After the workout, or mid-afternoon",food:"1 scoop lactose-free whey isolate, mixed with water; 10 oz Harmless Harvest coconut water",kcal:195,protein:25},
+      {id:"dinner",name:"Dinner",timing:"Evening",food:"5 oz cooked 90% lean ground beef, well seasoned; 1 large baked potato; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:720,protein:46},
+      {id:"snack2",name:"Snack 2",timing:"Later evening, if needed",food:"1 cup lactose-free 0% Greek yogurt, if tolerated",kcal:130,protein:20,note:"If yogurt bothers your stomach, swap for 1 scoop whey in water."}
+    ]},
+    5:{name:"Friday",kind:"Training day",train:"Lower B + core",kcal:2263,protein:188,meals:[
+      {id:"breakfast",name:"Breakfast",timing:"Morning",food:"3/4 cup dry oats, cooked in water with cinnamon and a pinch of salt; 1 scoop lactose-free whey isolate, mixed with water; 1 medium banana; 6 oz orange juice",kcal:530,protein:35},
+      {id:"lunch",name:"Lunch",timing:"Midday",food:"6 oz cooked turkey breast, well seasoned; 1½ cups cooked white rice; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:702,protein:58},
+      {id:"snack1",name:"Snack 1",timing:"Afternoon",food:"1 cup lactose-free 0% Greek yogurt, if tolerated; 10 oz Harmless Harvest coconut water",kcal:205,protein:20,note:"If yogurt bothers your stomach, swap for 1 scoop whey and keep the coconut water."},
+      {id:"dinner",name:"Dinner",timing:"Evening",food:"6 oz cooked salmon; 1 large baked potato; 1 cup cooked vegetables (carrots, zucchini, or green beans); 1 tsp butter or olive oil",kcal:706,protein:50},
+      {id:"snack2",name:"Snack 2",timing:"After the workout, or later evening",food:"1 scoop lactose-free whey isolate, mixed with water",kcal:120,protein:25}
+    ]},
+    6:{name:"Saturday",kind:"Training day",train:"Conditioning",kcal:2213,protein:181,meals:[
+      {id:"breakfast",name:"Breakfast",timing:"Morning",food:"3 large eggs, scrambled; 2 slices soft white or sourdough bread; 1 tsp butter or olive oil; 1 medium banana",kcal:495,protein:24},
+      {id:"lunch",name:"Lunch",timing:"Midday",food:"6 oz cooked chicken breast, well seasoned; 1½ cups cooked white rice; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:718,protein:61},
+      {id:"snack1",name:"Snack 1",timing:"Around intervals, or mid-afternoon",food:"1 scoop lactose-free whey isolate, mixed with water; 16 oz Harmless Harvest coconut water",kcal:240,protein:25},
+      {id:"dinner",name:"Dinner",timing:"Evening",food:"5 oz cooked turkey breast, well seasoned; 1 large baked potato; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:630,protein:51},
+      {id:"snack2",name:"Snack 2",timing:"Later evening, if needed",food:"1 cup lactose-free 0% Greek yogurt, if tolerated",kcal:130,protein:20,note:"If yogurt bothers your stomach, swap for 1 scoop whey in water."}
+    ]},
+    0:{name:"Sunday",kind:"Rest day",train:"Full rest",kcal:2219,protein:184,meals:[
+      {id:"breakfast",name:"Breakfast",timing:"Morning",food:"3/4 cup dry oats, cooked in water with cinnamon and a pinch of salt; 1 scoop lactose-free whey isolate, mixed with water; 1 medium banana; 1 tsp honey (optional, in the oats)",kcal:471,protein:34},
+      {id:"lunch",name:"Lunch",timing:"Midday",food:"6 oz cooked chicken breast, well seasoned; 1½ cups cooked white rice; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:718,protein:61},
+      {id:"snack1",name:"Snack 1",timing:"Afternoon",food:"1 cup lactose-free 0% Greek yogurt, if tolerated; 1 medium banana",kcal:235,protein:21,note:"If yogurt bothers your stomach, swap for 1 scoop whey and keep the banana."},
+      {id:"dinner",name:"Dinner",timing:"Evening",food:"5 oz cooked 90% lean ground beef, well seasoned; 1 medium baked potato; 1 cup cooked vegetables (carrots, zucchini, or green beans); 2 tsp butter or olive oil",kcal:600,protein:43},
+      {id:"snack2",name:"Snack 2",timing:"Later evening",food:"1 scoop lactose-free whey isolate, mixed with water; 10 oz Harmless Harvest coconut water",kcal:195,protein:25}
+    ]}
+  },
+  groceryNote:"Shop at Publix or wherever is easiest. Quantities are a little above the exact menu so you have leftovers and a flare-day backup. One person, about 7 days.",
+  grocery:[
+    {cat:"Protein",items:[
+      {id:"chicken",t:"Chicken breast, about 3 lb raw"},
+      {id:"turkey",t:"Turkey breast, about 2 lb"},
+      {id:"beef",t:"90% lean ground beef, about 1.5 lb"},
+      {id:"salmon",t:"Salmon, about 1–1.25 lb"},
+      {id:"whitefish",t:"Cod or tilapia, about 1 lb"},
+      {id:"eggs",t:"Eggs, 2 dozen"},
+      {id:"whey",t:"Lactose-free whey isolate, 1 tub (you will use about 12–15 scoops this week)"},
+      {id:"yogurt",t:"Lactose-free 0% Greek yogurt, about 6–8 cups, only if you tolerate it"},
+      {id:"tuna",t:"Optional backup: canned tuna in water, 3–4 cans, as a swap for a cooked lean protein",optional:true,suggested:true}
+    ]},
+    {cat:"Carbs and produce",items:[
+      {id:"rice",t:"White rice, 5 lb bag"},
+      {id:"oats",t:"Old-fashioned or quick oats, 1 canister"},
+      {id:"potatoes",t:"Russet or gold potatoes, 8–10"},
+      {id:"bananas",t:"Bananas, 8–10"},
+      {id:"oj",t:"Orange juice, 1 small carton"},
+      {id:"bread",t:"Soft white or sourdough bread, 1 loaf"},
+      {id:"veg",t:"Cooked-vegetable rotation: carrots, zucchini, green beans, and spinach for sautéing or steaming"},
+      {id:"applesauce",t:"Unsweetened applesauce, 1 jar (flare backup)"}
+    ]},
+    {cat:"Fats, seasoning, drinks",items:[
+      {id:"butter",t:"Butter and/or olive oil"},
+      {id:"seasoning",t:"Salt, garlic, paprika, dried herbs, black pepper, cinnamon"},
+      {id:"coconut",t:"Harmless Harvest Organic Coconut Water, about 7 bottles for the week (you already buy 10 oz 12-packs and 16 oz Publix bottles)",confirmed:true},
+      {id:"water",t:"Water is the main drink"},
+      {id:"shots",t:"Optional, not required: So Good So You shots you already buy. Do not count them as a meal.",optional:true,confirmed:true}
+    ]}
+  ],
+  prep:[
+    "On Sunday, cook a large pot of white rice, bake or grill 3–4 days of chicken, bake a tray of potatoes, and steam or sauté a batch of vegetables.",
+    "Season the meat and potatoes well with salt, garlic, paprika, and herbs. Bland food is harder to stick with; seasoning is part of the plan.",
+    "Pack 3–4 lunch boxes so weekday midday meals are grab-and-go.",
+    "Keep whey, bananas, and coconut water ready for the fast snacks.",
+    "Cook a second batch on Thursday so Friday through Sunday stays fresh.",
+    "Store a flare kit without thinking: plain rice, baked chicken or turkey, bananas, peeled potatoes, applesauce, and whey.",
+    "Reheat gently. Add a teaspoon of butter after warming if the rice or potato looks dry.",
+    "If you eat out for lunch, skip the planned lunch (and the extra shake if the restaurant meal is already similar in calories and protein). Do not stack both."
+  ],
+  eatoutIntro:"Restaurant numbers below are from published menu guides and will vary with customizations. These are lunch or dinner swaps, not add-ons.",
+  eatout:[
+    {name:"Chick-fil-A",fact:"You already eat here in the Atlanta area, so this is the first backup.",kind:"confirmed-backup",items:[
+      "Best protein-forward order: 12-count Grilled Nuggets (200 kcal, 38 g protein) plus a Fruit Cup (about 60 kcal). Drink unsweet tea or water. Skip fries and creamy sauces, or use a light dip.",
+      "That meal is light for a full lunch (~260 kcal, 38 g protein). Add your usual whey shake later (about 120 kcal, 25 g protein) and keep dinner as planned.",
+      "If you want a sandwich: Grilled Chicken Sandwich (390 kcal, 28 g protein) plus a Fruit Cup, no fries. Pair with a whey shake later if protein is still short.",
+      "On a flare, prefer the grilled nuggets and skip raw lettuce and tomato."
+    ]},
+    {name:"Chipotle",fact:"A practical bowl when you want a sit-down-style lunch. This is a suggested chain order, not a documented usual order.",kind:"suggestion",items:[
+      "Order a bowl (no tortilla, no chips): double chicken, white rice, fajita vegetables, fresh tomato salsa or mild tomatillo salsa.",
+      "Skip beans (higher fiber), cheese, sour cream, queso, and vinaigrette, which keeps lactose and extra calories down.",
+      "Approximate total: about 615 kcal and 69 g protein (chicken 180×2, white rice 210, fajita vegetables 20, tomato salsa 25; Chipotle published component values). That can replace lunch and the mid-day shake.",
+      "On a flare, keep it even simpler: double chicken, white rice, and mild salsa only."
+    ]},
+    {name:"Other simple swaps",fact:"",kind:"suggestion",items:[
+      "A grocery-store rotisserie chicken breast with white rice or a baked potato is a fine emergency dinner if you are already at Publix.",
+      "If you end up somewhere without a grilled option, choose a simple grilled protein and a plain starch, and skip fried sides."
+    ]}
+  ],
+  hydration:[
+    "Make 3–4 liters of water the daily baseline, including what you sip at the gym.",
+    "Use Harmless Harvest coconut water around training or on hot days. A 16 oz bottle is 120 kcal (the label is 60 kcal per 8 oz serving, two servings per bottle). A 10 oz bottle is about 75 kcal. Those calories are already inside the snack slots that list it.",
+    "Sip between meals. If large amounts of fluid aggravate a flare, take smaller, steady sips instead of chugging.",
+    "So Good So You shots are optional and extra. They are not required for this plan."
+  ],
+  scale:[
+    "Weigh once a week, in the morning, after using the bathroom and before eating, in similar clothes. Daily weight will bounce with water, salt, and training.",
+    "Aim for about 1–1.5 lb down per week, averaged over two weeks, not every single day.",
+    "If after two weeks you have lost little or nothing, and you have been following the plan: cut about 150–200 kcal per day. Easiest cuts are 1/2 cup cooked rice, the evening yogurt, or 2 tsp of butter. Keep protein at 180–190 g.",
+    "If you are losing more than about 2 lb per week, or lifting performance is dropping hard: add about 150–200 kcal, usually as extra rice or a teaspoon or two of butter.",
+    "If energy is poor only on training days, move more of the day's carbohydrates to the meals around the workout rather than slashing calories further.",
+    "Crohn's symptoms come first. If a change in food or calories coincides with a flare, stop and check in with your GI doctor."
+  ],
+  sourceNotes:[
+    "Confirmed personal facts used in this plan; do not treat other menu foods as stated favorites.",
+    "Daily targets already used in Spidey Gym: 2,200–2,300 kcal, 180–190 g protein, 3–4 L water, 8,000–10,000 steps, 7–8 hours of sleep.",
+    "You already buy Harmless Harvest Organic Coconut Water and sometimes So Good So You shots.",
+    "Chick-fil-A appears in recent Atlanta-area card activity, so it is listed as a realistic eat-out option. Chipotle is a suggested chain order, not a documented usual order.",
+    "Canned tuna is listed only as an optional grocery backup, not as a documented usual order.",
+    "Kitchen calorie and protein values are consistent internal estimates. Chick-fil-A and Chipotle figures follow those restaurants' published item values as of late 2026. Harmless Harvest calories follow the 60 kcal per 8 fl oz label."
+  ],
+  disclaimer:"This plan is general nutrition guidance for training and fat loss. It is not medical advice, a diagnosis, or a substitute for care from your physician or gastroenterologist. Check diet changes, supplements, and flare-day eating with your GI doctor. Stop any food that triggers symptoms."
+};
+
+/* Nov 23 beginner abs + core circuit (from Beginner_Abs_Nov23.pdf). Used as Monday's default finisher, or on every training day if chosen. The PDF's 15–20 min incline walk is offered as an optional finish in place of the usual 10 min walk, not stacked on top of Upper A. */
+var ABS_NOV23={
+  note:"Nov 23 beginner circuit · 2 rounds today (3rd optional). Rest 30–45 sec between moves, 60–90 sec between rounds. This is a core day, not a max-effort day. Stop if you feel abdominal pain that isn't a muscle burn.",
+  items:[
+    {ex:"captain_chair",sets:2,lo:8,hi:12,rest:45},
+    {ex:"reverse_crunch",sets:2,lo:8,hi:12,rest:45},
+    {ex:"dead_bug",sets:2,lo:8,hi:8,side:true,rest:45},
+    {ex:"plank",sets:2,lo:20,hi:30,unit:"sec",rest:45},
+    {ex:"side_plank",sets:2,lo:15,hi:20,unit:"sec",side:true,rest:45},
+    {ex:"pallof",sets:2,lo:8,hi:10,side:true,rest:45},
+    {ex:"ab_machine",sets:2,lo:10,hi:12,rest:45}
+  ],
+  flareNote:"Flare day: skip the captain's chair and crunch machine. Do 1 easy round of dead bugs, small-range reverse crunches, and a knee plank, then a flat 10–15 min walk.",
+  flare:[
+    {ex:"dead_bug",sets:1,lo:8,hi:8,side:true,rest:45},
+    {ex:"reverse_crunch",sets:1,lo:8,hi:12,rest:45},
+    {ex:"plank",sets:1,lo:20,hi:30,unit:"sec",rest:45}
+  ],
+  optionalWalk:"Optional Nov 23 finish: 15–20 min incline walk, easy conversational pace, incline about 6–8, and don't hold the rails. If you do this, use it instead of the usual 10 min walk — don't stack both.",
+  flareWalk:"Then a flat 10–15 min walk.",
+  third:"2 rounds is the goal. If you feel good and have no abdominal pain, you can add a 3rd."
+};
+
 var KEY="spidey_workout_v1";
 var S=load();
-function load(){try{var s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&s.v===1)return s;}catch(e){}
- return {v:1,sessions:[],cur:null,bw:[{d:"2026-11-17",w:195}],settings:{units:"lb",mode:"week",sound:true},seenIntro:false};}
+function load(){try{var s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&s.v===1)return normalize(s);}catch(e){}
+ return normalize(null);}
+function normalize(s){s=s||{};s.v=1;s.sessions=s.sessions||[];if(!("cur" in s))s.cur=null;s.bw=s.bw||[{d:"2026-11-17",w:195}];s.settings=s.settings||{};
+ if(!s.settings.units)s.settings.units="lb";if(!s.settings.mode)s.settings.mode="week";if(s.settings.sound==null)s.settings.sound=true;
+ if(s.settings.flareDay==null)s.settings.flareDay=false;if(!s.settings.absStyle)s.settings.absStyle="mon-nov23";
+ s.seenIntro=!!s.seenIntro;s.meals=s.meals||{};s.grocery=s.grocery||{};return s;}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 function $(s,r){return (r||document).querySelector(s);}
 function esc(t){return String(t==null?"":t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
@@ -179,14 +443,18 @@ function fmtDate(s){var d=pd(s);return DN[d.getDay()]+", "+d.toLocaleDateString(
 function clock(ms){return new Date(ms).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"});}
 function U(){return S.settings.units;}
 function inc(){return U()==="kg"?2.5:5;}
-function allItems(day){return day.main.concat(day.abs);}
+function absStyleOf(day){if(S.cur&&S.cur.day===day.code&&S.cur.absStyle)return S.cur.absStyle;return (S.settings&&S.settings.absStyle)||"mon-nov23";}
+function usesNov23(day){var st=absStyleOf(day);return st==="nov23"||(st==="mon-nov23"&&day.code==="UA");}
+function absItems(day,easy){if(usesNov23(day))return easy?ABS_NOV23.flare:ABS_NOV23.items;return day.abs;}
+function absNoteFor(day,easy){if(usesNov23(day))return easy?ABS_NOV23.flareNote:ABS_NOV23.note;return day.absNote;}
+function allItems(day,easy){if(easy==null&&S.cur&&S.cur.day===day.code)easy=S.cur.easy;return day.main.concat(absItems(day,!!easy));}
 function ikey(day,sec,i){return sec+i;}
 function repTxt(it){var r=it.lo===it.hi?it.lo:it.lo+"–"+it.hi;if(it.unit==="sec")r+=" sec";return it.sets+" × "+r+(it.side?" /side":"");}
 /* ---------- time estimate ---------- */
 var WARM_MIN=7,TRANSITION=60,REP_SEC=4;
 function setSec(it){var w=it.unit==="sec"?it.hi+10:Math.round(((it.lo+it.hi)/2)*REP_SEC)+10;return it.side?w*2:w;}
 function itemSec(it,sets){sets=sets==null?it.sets:sets;return sets*setSec(it)+Math.max(0,sets-1)*it.rest+(it.rest===0?0:TRANSITION);}
-function estDay(day,easy){var t=WARM_MIN*60;allItems(day).forEach(function(it){t+=itemSec(it,easy?easySets(it):it.sets);});t+=10*60;return Math.round(t/60);}
+function estDay(day,easy){var t=WARM_MIN*60;allItems(day,!!easy).forEach(function(it){t+=itemSec(it,easy?easySets(it):it.sets);});t+=10*60;return Math.round(t/60);}
 function easySets(it){return Math.max(1,Math.ceil(it.sets/2));}
 function estRemaining(day,cur){var t=0,easy=cur.easy;allItems(day).forEach(function(it,ix){var k=keyOf(day,ix);var rows=cur.sets[k]||[];var n=easy?easySets(it):it.sets;var done=rows.filter(function(r){return r&&r.done;}).length;var left=Math.max(0,n-done);if(left>0)t+=left*setSec(it)+left*it.rest+(done===0&&it.rest!==0?TRANSITION:0);});if(!cur.finDone)t+=10*60;if(!cur.started)t+=WARM_MIN*60;return Math.round(t/60);}
 function keyOf(day,ix){return allItems(day)[ix].ex+"@"+ix;}
@@ -194,7 +462,7 @@ function estLabel(code){var d=DAYS[code];if(d)return "~"+estDay(d,false)+" min";
 /* ---------- schedule ---------- */
 function todayCode(){var w=new Date().getDay();if(S.settings.mode==="rot")return nextRot();return WEEK[w];}
 function nextRot(){for(var i=S.sessions.length-1;i>=0;i--){var c=S.sessions[i].day;var j=ROT.indexOf(c);if(j>=0)return ROT[(j+1)%4];}return "UA";}
-var view={tab:"today",day:null};
+var view={tab:"today",day:null,mealDow:null,mealsSec:"menu"};
 /* ---------- history helpers ---------- */
 function lastFor(exId,beforeId){for(var i=S.sessions.length-1;i>=0;i--){var s=S.sessions[i];if(beforeId&&s.id===beforeId)continue;for(var k in s.sets){if(k.split("@")[0]===exId){var rows=s.sets[k].filter(function(r){return r&&r.done;});if(rows.length)return {date:s.date,rows:rows,day:s.day};}}}return null;}
 function suggest(it,last){if(!last)return {t:"First time: pick a weight you could do ~12–13 times, so "+it.lo+" feels controlled.",w:null};
@@ -208,6 +476,7 @@ function suggest(it,last){if(!last)return {t:"First time: pick a weight you coul
 function render(){var m=$("#main");
  document.querySelectorAll(".tabbar button").forEach(function(b){b.classList.toggle("on",b.dataset.tab===view.tab);});
  if(view.tab==="today")m.innerHTML=renderToday();
+ else if(view.tab==="meals")m.innerHTML=renderMeals();
  else if(view.tab==="plan")m.innerHTML=renderPlan();
  else if(view.tab==="progress"){m.innerHTML=renderProgress();drawChart();}
  else m.innerHTML=renderSettings();
@@ -223,20 +492,25 @@ function renderToday(){var code=view.day||todayCode();var cur=S.cur;
  if(S.settings.mode==="rot")h+='<div class="note small">Rotation mode: next up is <b>'+DAYS[nextRot()].name+'</b>.</div>';
  if(!DAYS[code])return h+renderRest(code);
  var day=DAYS[code];var active=cur&&cur.day===code;var easy=active?cur.easy:false;
- var est=estDay(day,easy);
+ var items=allItems(day,easy);var abs=absItems(day,easy);var est=estDay(day,easy);
  h+='<section class="hero"><div class="kicker">'+(code===todayCode()?"TODAY":"WORKOUT")+' · '+fmtDate(active?cur.date:ds())+'</div><h1>'+day.name+'</h1><div class="tag">'+day.tag+'</div>'+
-  '<div class="stats"><div><b>~'+est+'</b><span>min total</span></div><div><b>'+day.main.length+'+'+day.abs.length+'</b><span>lifts + abs</span></div><div><b>'+allItems(day).reduce(function(a,it){return a+(easy?easySets(it):it.sets);},0)+'</b><span>sets</span></div></div>';
+  '<div class="stats"><div><b>~'+est+'</b><span>min total</span></div><div><b>'+day.main.length+'+'+abs.length+'</b><span>lifts + abs</span></div><div><b>'+items.reduce(function(a,it){return a+(easy?easySets(it):it.sets);},0)+'</b><span>sets</span></div></div>';
  if(!active){h+='<div class="estline">Est. finish if you start now: <b>'+clock(Date.now()+est*60000)+'</b></div><button class="big red" onclick="startW(\''+code+'\')">▶ Start workout · ~'+est+' min</button>'+
-  '<button class="ghost" onclick="startW(\''+code+'\',true)">Flare / low-energy day? Start easy mode (~'+estDay(day,true)+' min, half the sets)</button>';
+  '<button class="ghost" onclick="startW(\''+code+'\',true)">Flare / low-energy day? Start easy mode (~'+estDay(day,true)+' min, half the sets'+(usesNov23(day)?'; Nov 23 flare abs':'')+')</button>';
+  if(S.settings.flareDay)h+='<div class="note warn"><b>Flare-day eating is on</b> in Meals. Easy mode is recommended — half the sets, and go easy on core. <a href="#" onclick="go(\'meals\');return false">Open today\'s meals</a>.</div>';
   if(cur&&cur.day!==code)h+='<div class="note warn">You have '+DAYS[cur.day].name+' in progress. <a href="#" onclick="pickDay(\''+cur.day+'\');return false">Go back to it</a>.</div>';}
  else h+='<div id="live" class="live"></div>';
  h+='</section>';
  h+='<div class="note crohn"><b>Gut check:</b> sip water between sets (aim 3–4 L today). Flare day? Easy mode, lighter weights, or just the walk is a win. Go easy on core work if your stomach is acting up.</div>';
+ if(!active){h+='<div class="card set absseg"><b>Abs finisher</b><div class="seg">'+[["mon-nov23","Mon: Nov 23 circuit"],["nov23","Full circuit every day"],["short","Short finishers"]].map(function(u){return '<button class="'+(((S.settings.absStyle||"mon-nov23")===u[0])?'on':'')+'" onclick="setS(\'absStyle\',\''+u[0]+'\')">'+u[1]+'</button>';}).join('')+'</div><div class="small">Every training day still ends with core. The Nov 23 beginner circuit is 7 moves, 2 rounds (3rd optional). Default: use it on Monday after Upper A.</div></div>';}
  h+='<div class="sec"><span>WARM-UP</span><em>~'+WARM_MIN+' min</em></div><div class="card plain">'+esc(day.warm)+'</div>';
  h+='<div class="sec"><span>MAIN LIFTS</span><em>'+day.src+'</em></div>';
  day.main.forEach(function(it,i){h+=exCard(day,it,i,active,easy,String(i+1));});
- h+='<div class="sec abs"><span>ABS FINISHER</span><em>'+esc(day.absNote)+'</em></div>';
- day.abs.forEach(function(it,j){var i=day.main.length+j;h+=exCard(day,it,i,active,easy,"A"+(j+1));});
+ h+='<div class="sec abs"><span>ABS FINISHER</span><em>'+esc(absNoteFor(day,easy))+'</em></div>';
+ if(usesNov23(day)&&easy)h+='<div class="note warn">'+esc(ABS_NOV23.flareNote)+'</div>';
+ abs.forEach(function(it,j){var i=day.main.length+j;h+=exCard(day,it,i,active,easy,"A"+(j+1));});
+ if(usesNov23(day)&&!easy)h+='<div class="note">'+esc(ABS_NOV23.third)+' '+esc(ABS_NOV23.optionalWalk)+'</div>';
+ if(usesNov23(day)&&easy)h+='<div class="note">'+esc(ABS_NOV23.flareWalk)+'</div>';
  h+='<div class="sec"><span>FINISH</span><em>~10 min</em></div><label class="card plain finrow"><input type="checkbox" '+(active&&cur.finDone?'checked':'')+(active?'':' disabled')+' onchange="finToggle(this.checked)"> '+esc(day.finish)+' Then a quick chest, lat and hip stretch.</label>';
  if(active)h+='<button class="big blue" onclick="finishW()">✓ Finish & save workout</button><button class="ghost danger" onclick="discardW()">Discard this session</button>';
  h+='<div class="foot">Progress rule: when you hit the top of the rep range on every set, add '+inc()+' '+U()+'. Leave 1–2 reps in the tank. If a joint hurts (not muscle burn), skip that move.</div>';
@@ -270,7 +544,7 @@ function nextLiftAfterToday(){var w=new Date().getDay();for(var i=1;i<=7;i++){va
 function logRest(code){if(S.sessions.some(function(s){return s.date===ds()&&s.day===code;}))return;S.sessions.push({id:"s"+Date.now(),date:ds(),day:code,sets:{},start:Date.now(),end:Date.now()});save();toast("Logged. Nice work.");render();}
 /* ---------- session actions ---------- */
 function startW(code,easy){if(S.cur&&S.cur.day!==code&&!confirm("Replace the "+DAYS[S.cur.day].name+" session in progress?"))return;
- var day=DAYS[code];S.cur={day:code,date:ds(),sets:{},easy:!!easy,started:Date.now(),est:estDay(day,!!easy),finDone:false};S.cur.estFinish=S.cur.started+S.cur.est*60000;S.cur.ex={};S.cur.over=0;save();view.day=code;render();unlockAudio();wakeOn();cue("Workout started. Warm up for about 7 minutes, then start "+EX[day.main[0].ex].name+".");toast("Timer started. Warm up first.");}
+ var day=DAYS[code];if(easy)S.settings.flareDay=true;S.cur={day:code,date:ds(),sets:{},easy:!!easy,absStyle:S.settings.absStyle||"mon-nov23",started:Date.now(),est:estDay(day,!!easy),finDone:false};S.cur.estFinish=S.cur.started+S.cur.est*60000;S.cur.ex={};S.cur.over=0;save();view.day=code;render();unlockAudio();wakeOn();cue("Workout started. Warm up for about 7 minutes, then start "+EX[day.main[0].ex].name+".");toast(easy?"Easy mode on. Flare-day meals are on too.":"Timer started. Warm up first.");}
 function setVal(i,s,f,v){var day=DAYS[S.cur.day];var k=keyOf(day,i);var rows=S.cur.sets[k]=S.cur.sets[k]||[];rows[s]=rows[s]||{};rows[s][f]=v.trim();save();}
 function tick(i,s){var day=DAYS[S.cur.day];var items=allItems(day);var it=items[i];var k=keyOf(day,i);var rows=S.cur.sets[k]=S.cur.sets[k]||[];var r=rows[s]=rows[s]||{};
  var card=$("#c"+i);var row=card.querySelectorAll(".setrow")[s];var ins=row.querySelectorAll("input");unlockAudio();
@@ -351,7 +625,7 @@ function closeModal(){$("#modal").classList.remove("on");$("#modal").innerHTML="
 /* ---------- plan tab ---------- */
 function renderPlan(){var h='<section class="hero slim"><div class="kicker">SPIDER-MAN PROGRAM · BEGINNER PHASE</div><h1>Your week</h1><div class="tag">4-day upper/lower split · Onelife Fitness</div></section>';
  [1,2,3,4,5,6,0].forEach(function(w){var c=WEEK[w];var d=DAYS[c];var r=REST[c];
-  h+='<div class="card dcard" onclick="pickDay(\''+c+'\')"><div class="dw">'+DN[w].toUpperCase()+'</div><div class="dm"><h3>'+(d?d.name:r.name)+'</h3><div class="rx">'+(d?d.tag+' · '+d.main.length+' lifts + '+d.abs.length+' abs':r.title)+'</div></div><div class="dt">'+estLabel(c)+'</div></div>';});
+  h+='<div class="card dcard" onclick="pickDay(\''+c+'\')"><div class="dw">'+DN[w].toUpperCase()+'</div><div class="dm"><h3>'+(d?d.name:r.name)+'</h3><div class="rx">'+(d?d.tag+' · '+d.main.length+' lifts + '+absItems(d,false).length+' abs':r.title)+'</div></div><div class="dt">'+estLabel(c)+'</div></div>';});
  h+='<div class="card plain"><b>Goal:</b> lean, athletic V-taper. About 175–180 lb at 10–12% body fat (from ~195 lb). Daily targets from your plan: 2,200–2,300 calories, 180–190 g protein, 3–4 L water, 8–10k steps, 7–8 h sleep.</div>';
  h+='<div class="card plain"><b>How time is estimated:</b> '+WARM_MIN+' min warm-up + each set (~'+REP_SEC+' sec/rep + setup, holds as timed, per-side moves doubled) + rest between sets + ~1 min to move between exercises + 10 min incline walk.</div>';
  h+='<div class="card plain"><b>Every 6th week:</b> go lighter by cutting sets in half (use Easy mode). Weeks 1–2 are about learning form.</div>';
@@ -396,14 +670,70 @@ function renderSettings(){var st=S.settings;
  '<div class="card set"><b>Rest timer beep</b><div class="seg">'+[[true,"On"],[false,"Off"]].map(function(u){return '<button class="'+(st.sound===u[0]?'on':'')+'" onclick="setS(\'sound\','+u[0]+')">'+u[1]+'</button>';}).join('')+'</div><div class="small">The phone also vibrates when rest is up (Android). iPhone: keep the ringer on for the beep.</div></div>'+
  '<div class="card set"><b>Voice coach</b><div class="seg">'+[[true,"On"],[false,"Off"]].map(function(u){return '<button class="'+((st.voice!==false)===u[0]?'on':'')+'" onclick="setS(\'voice\','+u[0]+')">'+u[1]+'</button>';}).join('')+'</div><div class="small">Says "Rest 90 seconds", "10 seconds left", "Start set 3 now", "Next exercise: …" out loud. Turn your volume up or use earbuds.</div></div>'+
  '<div class="card set"><b>Backup</b><button class="ghost" onclick="exportData()">⬇ Export logs (JSON)</button><label class="ghost filebtn">⬆ Import backup<input type="file" accept="application/json" onchange="importData(this)"></label></div>'+
+ '<div class="card set"><b>Abs finisher</b><div class="seg">'+[["mon-nov23","Mon: Nov 23"],["nov23","Full circuit"],["short","Short"]].map(function(u){return '<button class="'+(((st.absStyle||"mon-nov23")===u[0])?'on':'')+'" onclick="setS(\'absStyle\',\''+u[0]+'\')">'+u[1]+'</button>';}).join('')+'</div><div class="small">Default uses the Nov 23 beginner 7-move circuit as Monday\'s finisher. Other days keep their short core finishers. Every training day still ends with abs. A workout already in progress keeps the finisher it started with.</div></div>'+
+ '<div class="card set"><b>Flare-day eating</b><div class="seg">'+[[true,"On"],[false,"Off"]].map(function(u){return '<button class="'+((!!st.flareDay)===u[0]?'on':'')+'" onclick="setFlare('+u[0]+')">'+u[1]+'</button>';}).join('')+'</div><div class="small">Replaces today\'s menu with the simpler flare-day meals, and recommends easy mode (half the sets) when you start a workout.</div></div>'+
  '<div class="card set"><b>Install on your phone</b><div class="small">iPhone: Safari → Share → Add to Home Screen. Android: Chrome menu → Add to Home screen. Your logs stay on this phone (export to back up).</div></div>'+
  '<div class="card set"><button class="ghost danger" onclick="resetAll()">Reset all data</button></div>'+
- '<div class="foot">Not medical advice. With Crohn’s, check with your doctor about training during a flare. Exercise photos: free-exercise-db (public domain).</div>';}
+ '<div class="foot">Spidey Gym v5 · meal plan of Nov 23, 2026. Not medical advice. With Crohn’s, check with your doctor about training or diet changes during a flare. Exercise photos: free-exercise-db (public domain).</div>';}
 function setS(k,v){S.settings[k]=v;save();render();}
 function exportData(){var b=new Blob([JSON.stringify(S,null,2)],{type:"application/json"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="spidey-workout-backup-"+ds()+".json";document.body.appendChild(a);a.click();a.remove();toast("Backup downloaded");}
-function importData(inp){var f=inp.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var d=JSON.parse(r.result);if(d.v!==1||!Array.isArray(d.sessions))throw 0;S=d;save();render();toast("Backup restored");}catch(e){toast("That file isn't a valid backup");}};r.readAsText(f);}
-function resetAll(){if(confirm("Delete ALL workouts and bodyweight logs on this phone?")&&confirm("Really? This can't be undone.")){localStorage.removeItem(KEY);S=load();save();view={tab:"today",day:null};render();}}
+function importData(inp){var f=inp.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var d=JSON.parse(r.result);if(d.v!==1||!Array.isArray(d.sessions))throw 0;S=normalize(d);save();render();toast("Backup restored");}catch(e){toast("That file isn't a valid backup");}};r.readAsText(f);}
+function resetAll(){if(confirm("Delete ALL workouts, meal check-offs, grocery checks, and bodyweight logs on this phone?")&&confirm("Really? This can't be undone.")){localStorage.removeItem(KEY);S=load();save();view={tab:"today",day:null,mealDow:null,mealsSec:"menu"};render();}}
 function toast(t){var el=$("#toast");el.textContent=t;el.classList.add("on");clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove("on");},2400);}
-function go(t){view.tab=t;if(t==="today")view.day=null;render();}
+
+/* ---------- meals ---------- */
+function mealDow(){return view.mealDow==null?new Date().getDay():view.mealDow;}
+function mealDateFor(dow){var t=new Date();var w=t.getDay();var mon=new Date(t);mon.setDate(t.getDate()-((w+6)%7));var d=new Date(mon);d.setDate(mon.getDate()+((dow+6)%7));return ds(d);}
+function mealLog(date){S.meals=S.meals||{};if(!S.meals[date])S.meals[date]={eaten:{},water:0};if(!S.meals[date].eaten)S.meals[date].eaten={};if(S.meals[date].water==null)S.meals[date].water=0;return S.meals[date];}
+function activeMenu(dow){return S.settings.flareDay?MEALS.flare:MEALS.days[dow];}
+function mealTotals(dow,date){var menu=activeMenu(dow);var log=mealLog(date);var k=0,p=0,n=0;menu.meals.forEach(function(m){if(log.eaten[m.id]){k+=m.kcal;p+=m.protein;n++;}});return {kcal:k,protein:p,n:n,of:menu.meals.length,planK:menu.kcal,planP:menu.protein};}
+function setMealDow(d){view.mealDow=d;view.mealsSec="menu";render();}
+function setMealsSec(s){view.mealsSec=s;render();}
+function setFlare(on){S.settings.flareDay=!!on;save();render();toast(on?"Flare-day menu is on. Easy mode is recommended for today's workout.":"Back to the regular daily menu.");}
+function toggleMeal(id){var date=mealDateFor(mealDow());var log=mealLog(date);log.eaten[id]=!log.eaten[id];save();view.keepScroll=window.scrollY;render();}
+function toggleGrocery(id){S.grocery=S.grocery||{};S.grocery[id]=!S.grocery[id];save();view.keepScroll=window.scrollY;render();}
+function clearGrocery(){S.grocery={};save();render();toast("Grocery checks cleared");}
+function addWater(n){var date=mealDateFor(mealDow());var log=mealLog(date);log.water=Math.max(0,(log.water||0)+n);save();view.keepScroll=window.scrollY;render();}
+function tbarHtml(val,lo,hi,unit){var max=Math.max(hi*1.15,val);var pct=Math.min(100,val/max*100);var z0=lo/max*100,z1=hi/max*100;var cls=val>=lo&&val<=hi?"ok":(val>hi?"over":"");
+ return '<div class="trow"><span>'+unit+'</span><b>'+val.toLocaleString()+'</b> <span>of '+lo.toLocaleString()+'–'+hi.toLocaleString()+'</span></div><div class="tbar '+cls+'"><span class="zone" style="left:'+z0+'%;width:'+(z1-z0)+'%"></span><i style="width:'+pct+'%"></i></div>';}
+function renderMeals(){var dow=mealDow();var date=mealDateFor(dow);var flare=!!S.settings.flareDay;var menu=activeMenu(dow);var day=MEALS.days[dow];var log=mealLog(date);var tot=mealTotals(dow,date);var t=MEALS.targets;
+ var h='<div class="mjump">'+[["menu","Today"],["grocery","Grocery"],["prep","Prep"],["eatout","Eat out"],["hydrate","Hydration"],["scale","Scale"]].map(function(u){return '<button class="'+((view.mealsSec||"menu")===u[0]?'on':'')+'" onclick="setMealsSec(\''+u[0]+'\')">'+u[1]+'</button>';}).join('')+'</div>';
+ if((view.mealsSec||"menu")==="menu"){
+  h+='<section class="hero meals"><div class="kicker">'+(date===ds()?"TODAY":"MENU")+' · '+fmtDate(date)+'</div><h1>Meals</h1><div class="tag">'+(flare?"Flare-day menu in place of "+day.name:" "+day.name+" · "+day.train+" · "+day.kind)+'</div>'+
+   '<div class="stats"><div><b>'+menu.kcal.toLocaleString()+'</b><span>kcal planned</span></div><div><b>'+menu.protein+' g</b><span>protein planned</span></div><div><b>'+tot.n+'/'+tot.of+'</b><span>meals logged</span></div></div></section>';
+  var chips='<div class="strip">';
+  [1,2,3,4,5,6,0].forEach(function(d){var dd=MEALS.days[d];var dt=mealDateFor(d);var tg=mealTotals(d,dt);var done=tg.n===tg.of;chips+='<button class="chip'+(d===dow?' on':'')+(dt===ds()?' today':'')+(done?' done':'')+'" onclick="setMealDow('+d+')"><b>'+DN[d]+'</b><span>'+dd.train.split(" ")[0]+'</span>'+(done?'<i>✓</i>':'')+'</button>';});
+  h+=chips+'</div>';
+  h+='<div class="mtog"><div><b>Flare-day menu</b><span>Simpler foods, no raw vegetables or skins. Also recommends easy mode for today\'s workout.</span></div><button class="sw'+(flare?' on':'')+'" onclick="setFlare('+(!flare)+')" aria-pressed="'+flare+'"><i></i></button></div>';
+  if(flare)h+='<div class="note warn">'+esc(MEALS.flareNote)+'</div>';
+  h+='<div class="totals"><div class="small" style="margin:0 0 6px">Logged against the daily targets of 2,200–2,300 kcal and 180–190 g protein.</div>'+tbarHtml(tot.kcal,t.kcalLo,t.kcalHi,"Calories (kcal)")+tbarHtml(tot.protein,t.proteinLo,t.proteinHi,"Protein (g)")+
+   '<div class="small">Planned day: '+menu.kcal.toLocaleString()+' kcal, '+menu.protein+' g protein. Weekly regular-day average: 2,254 kcal and 186 g.</div></div>';
+  menu.meals.forEach(function(m){var on=!!log.eaten[m.id];h+='<label class="card mcard'+(on?' done':'')+'"><input type="checkbox" '+(on?'checked':'')+' onchange="toggleMeal(\''+m.id+'\')"><div class="mn"><div class="mh"><h3>'+esc(m.name)+'</h3><div class="mk">'+m.kcal+' kcal · '+m.protein+' g</div></div>'+(m.timing?'<div class="when">'+esc(m.timing)+'</div>':'')+'<p>'+esc(m.food)+'</p>'+(m.note?'<div class="mnote">'+esc(m.note)+'</div>':'')+'</div></label>';});
+  h+='<div class="note">'+esc(MEALS.estimateNote)+'</div>';
+  h+='<div class="sec"><span>TIMING</span><em>'+(day.kind.indexOf("Rest")>=0||day.kind.indexOf("walk")>=0?"Rest / walk day":"Training day")+'</em></div><div class="card plain"><ul class="plain">'+(day.kind.indexOf("Rest")>=0||dow===0||dow===3?MEALS.timingRest:MEALS.timingTrain).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';
+  h+='<div class="sec"><span>WEEK AT A GLANCE</span></div><div class="card plain">'+MEALS.glance.map(function(g){return '<div class="hrow"><div><b>'+esc(MEALS.days[g.dow].name)+'</b><span>'+esc(g.train)+'</span></div><div class="r">'+g.kcal.toLocaleString()+' kcal<br>'+g.protein+' g</div></div>';}).join('')+'<div class="small">'+esc(MEALS.shiftNote)+'</div></div>';
+ } else if(view.mealsSec==="grocery"){
+  var gN=0,gOn=0;MEALS.grocery.forEach(function(c){c.items.forEach(function(it){gN++;if(S.grocery[it.id])gOn++;});});
+  h+='<section class="hero meals slim"><div class="kicker">GROCERY</div><h1>This week</h1><div class="tag">'+gOn+' / '+gN+' checked · one person, about 7 days</div></section>';
+  h+='<div class="note">'+esc(MEALS.groceryNote)+'</div>';
+  MEALS.grocery.forEach(function(c){h+='<div class="sec"><span>'+esc(c.cat).toUpperCase()+'</span></div><div class="card plain">';c.items.forEach(function(it){var on=!!S.grocery[it.id];h+='<label class="gitem'+(on?' done':'')+'"><input type="checkbox" '+(on?'checked':'')+' onchange="toggleGrocery(\''+it.id+'\')"><span>'+esc(it.t)+(it.optional?'<em class="tagpill opt">Optional</em>':'')+(it.suggested?'<em class="tagpill sug">Backup, not a usual order</em>':'')+(it.confirmed&&!it.optional?'<em class="tagpill you">You already buy this</em>':'')+(it.confirmed&&it.optional?'<em class="tagpill you">You already buy this</em>':'')+'</span></label>';});h+='</div>';});
+  h+='<button class="ghost" onclick="clearGrocery()">Clear grocery checks (new week)</button>';
+ } else if(view.mealsSec==="prep"){
+  h+='<section class="hero meals slim"><div class="kicker">MEAL PREP</div><h1>Get ahead</h1></section><div class="card plain"><ul class="plain">'+MEALS.prep.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';
+ } else if(view.mealsSec==="eatout"){
+  h+='<section class="hero meals slim"><div class="kicker">EAT OUT</div><h1>Swaps, not add-ons</h1></section><div class="note">'+esc(MEALS.eatoutIntro)+'</div>';
+  MEALS.eatout.forEach(function(e){h+='<div class="card eout"><h3>'+esc(e.name)+(e.kind==="confirmed-backup"?'<em class="tagpill you">Realistic backup</em>':e.kind==="suggestion"?'<em class="tagpill sug">Suggestion</em>':'')+'</h3>'+(e.fact?'<div class="small" style="margin:0 0 8px">'+esc(e.fact)+'</div>':'')+'<ul class="plain">'+e.items.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';});
+ } else if(view.mealsSec==="hydrate"){
+  h+='<section class="hero meals slim"><div class="kicker">HYDRATION</div><h1>3–4 liters</h1><div class="tag">About 13–17 cups, including what you sip at the gym</div></section>';
+  h+='<div class="totals"><div class="trow"><span>Cups logged for '+fmtDate(date)+'</span><b>'+(log.water||0)+'</b> <span>of 13–17</span></div><div class="tbar '+((log.water||0)>=13&&(log.water||0)<=17?'ok':'')+'"><span class="zone" style="left:'+(13/20*100)+'%;width:'+(4/20*100)+'%"></span><i style="width:'+Math.min(100,(log.water||0)/20*100)+'%"></i></div><div class="wctl"><button onclick="addWater(-1)">−</button><b>'+(log.water||0)+'</b><button onclick="addWater(1)">+</button><span class="small">One cup is 8 oz. This is just a sip tracker; the target is the plan\'s 3–4 liters (about 13–17 cups).</span></div></div>';
+  h+='<div class="card plain"><ul class="plain">'+MEALS.hydration.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';
+ } else {
+  h+='<section class="hero meals slim"><div class="kicker">IF THE SCALE STALLS</div><h1>Adjust slowly</h1></section><div class="card plain"><ul class="plain">'+MEALS.scale.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';
+ }
+ h+='<div class="sec"><span>CROHN\'S NOTES</span></div><div class="note crohn"><b>'+esc(MEALS.crohn.disclaimer)+'</b><p>'+esc(MEALS.crohn.easier)+'</p><p>'+esc(MEALS.crohn.care)+'</p><ul class="plain">'+MEALS.crohn.personal.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';
+ h+='<div class="sec"><span>SOURCE NOTES</span></div><div class="card plain"><ul class="plain">'+MEALS.sourceNotes.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';
+ h+='<div class="foot">'+esc(MEALS.disclaimer)+'<br>Spidey Gym v5 · plan dated '+esc(MEALS.asOf)+'.</div>';
+ return h;}
+function go(t){view.tab=t;if(t==="today")view.day=null;if(t==="meals"&&view.mealsSec==null)view.mealsSec="menu";render();}
 document.addEventListener("DOMContentLoaded",function(){save();render();document.addEventListener("pointerdown",function(){unlockAudio();if(S.cur&&!WL)wakeOn();},{passive:true});$("#modal").addEventListener("click",function(e){if(e.target.id==="modal")closeModal();});});
 </script></body></html>
